@@ -26,7 +26,7 @@ function initDcData(userID){
 
 
             const avatar = profile.data.discord_user.avatar;
-            const userPfp = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.gif')
+            const userPfp = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.png')
             const userpfp = document.getElementById("userpfp");
             userpfp.src = userPfp;
         } 
