@@ -32,4 +32,4 @@ function initDcData(userID){
         } 
     }
 
-initDcData("540881924865130498");
+initDcData("your discord id");
