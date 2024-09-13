@@ -15,6 +15,11 @@ function initDcData(userID){
             const username = document.getElementById("usernm");
             username.innerHTML = profile.data.discord_user.username;
 
+            const avatar = profile.data.discord_user.avatar;
+            const userPfp = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.gif')
+            const userpfp = document.getElementById("userpfp");
+            userpfp.src = userPfp;
+
             const songName = document.getElementById("songname");
             songName.innerHTML = profile.data.spotify.song;
 
@@ -24,11 +29,6 @@ function initDcData(userID){
             const songArt = document.getElementById("songart");
             songArt.src = profile.data.spotify.album_art_url;
 
-
-            const avatar = profile.data.discord_user.avatar;
-            const userPfp = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.png')
-            const userpfp = document.getElementById("userpfp");
-            userpfp.src = userPfp;
         } 
     }
 
