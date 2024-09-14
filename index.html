@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta property="title" content="My WebSite">
-<meta name="description" content="You can see my discord activities!">
+<meta property="title" content="Krayir5's Site">
+<meta name="description" content="A website which i do my testings on">
 <head>
   <meta charset="UTF-8">
   <title>My Discord</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
+   <div class="preloader">
+       <img src="https://cdn.dribbble.com/users/63485/screenshots/1309731/infinite-gif-preloader.gif" class="img"/>
+   </div>
+<!-- Start of the Background -->
 <div class="container container-star">
   <div class="star-1"></div>
   <div class="star-1"></div>
@@ -132,15 +135,27 @@
       </div>
     </div>
   </div>
+<!-- End of the Background -->
+
+<!-- Start of the Status Box -->
 <div class="status-box">
 <div class="image">
-  <img src="assets/img/gray.png" class="image" id="userpfp"/>
+  <img src="assets/img/dcgray.png" class="image" id="userpfp"/>
+  <img src="assets/img/dcgray.png" class="userstatusbackground"/>
+  <img src="assets/img/invisible.png" class="userstatus" id="dcstatus"/>
   </div>
 <div class="text-content">
-  <h2><span id="globalname">Kayra</span></h2>
-  <h5><span id="usernm">kayra5__5</span></h5>
+  <h2><span id="globalname">Krayir5</span></h2>
+  <h5><span id="usernm">Krayir5</span></h5>
+<div class="activity-bubble">
+<h4><span id="emoji2"></span></h4>
+<img src="assets/img/invisible.png" id="emoji1" class="emoji"/>
+<div class="activity-bubble-text-content">
+<h5 id="userstate">There's no status to show</h5>
+ </div>
+</div>
   <div class="activity-box">  
-   <div class="image2"><img src="assets/img/gray.png" class="image2" id="apppfp"/></div>
+   <div class="image2"><img src="dcgray.png" class="image2" id="apppfp"/></div>
     <div class="activity-text-content">
     <h5><span id="songname">not listening to anything</span></h5>
     <h6><span id="songartist">or playing any games</span></h6>
@@ -149,8 +164,11 @@
   </div>
 </div>
 </div>
+<!-- End of the Status Box -->
 </div>
-<!-- partial -->
+<!-- Scripts -->
 <script src="api.js"></script>
+<script src="stateapi.js"></script>
+<script src="preloader.js"></script>
 </body>
 </html>
