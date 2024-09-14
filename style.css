@@ -41,6 +41,30 @@ body {
   margin-right: 20px;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: -10px;
+}
+.userstatus {
+  border-radius: 50%;
+  top: 60%;
+  left: 30%;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.userstatusbackground {
+  border-radius: 50%;
+  top: 116px;
+  left: 131px;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
 }
 .text-content {
   margin-top: -20px;
@@ -53,6 +77,7 @@ body {
   padding: 0;
   color: #ffffff;
   margin-bottom: -15px;
+  display: flex;
 }
 .status-box h5 {
   font-family: "Russo One", sans-serif;
@@ -65,6 +90,53 @@ body {
   padding: 0;
   color: #898784;
   margin-bottom: -15px;
+}
+
+
+
+.activity-bubble {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 72%;
+  left: 9%;
+  width: 150px;
+  height: 33px;
+  padding: 0;
+  color: #ffffff;
+  padding: 15px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  margin-left: 60px;
+  margin-top: 25px;
+}
+.activity-bubble-text-content {
+  margin-top: -31px;
+  display: flex;
+  flex-direction: column;
+}
+.activity-bubble h5 {
+  font-family: "Russo One", sans-serif;
+  padding: 0;
+  color: #898784;
+}
+.activity-bubble h4 {
+  padding: 0;
+  color: #898784;
+  margin-top: -9px;
+  margin-right: -20px;
+}
+.emoji {
+  margin-top: -8px;
+  margin-left: 17px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 20%;
+  object-fit: cover;
 }
 
 
@@ -1339,3 +1411,28 @@ body {
   }
 }
 /* End of the birds */
+
+
+/*////////////////////////////////////////*/
+
+
+.preloader {
+  background-color: #c4ebe8;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.preloader img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  width: 520px;
+  height: 520px;
+  top: 25%;
+  left: 37%;
+}

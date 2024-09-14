@@ -1,9 +1,9 @@
 function initDcData(userID){
         fetch('https://api.lanyard.rest/v1/users/'+userID)
         .then(response => response.json())
-        .then(profile => handleServerStatus(profile));
+        .then(profile => handleUserStatus(profile));
   
-        function handleServerStatus(profile){
+        function handleUserStatus(profile){
             if(profile.success == 'false'){
                 console.log(profile.error);
                 return false;
@@ -16,6 +16,20 @@ function msToMinSeconds(millis) {
     : minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
 }
 //Start of status box apis
+            const dcStatus = profile.data.discord_status;            
+            if(dcStatus == "offline"){
+               const dcstat = document.getElementById("dcstatus");
+               dcstat.src = "assets/img/offline.png";
+            }else if(dcStatus == "online"){
+               const dcstat = document.getElementById("dcstatus");
+               dcstat.src = "assets/img/online.png";
+            }else if(dcStatus == "idle"){
+               const dcstat = document.getElementById("dcstatus");
+               dcstat.src = "assets/img/idle.png";
+            }else if(dcStatus == "dnd"){
+               const dcstat = document.getElementById("dcstatus");
+               dcstat.src = "assets/img/dnd.png";
+            };
             const playerCounter = document.getElementById("globalname");
             playerCounter.innerHTML = profile.data.discord_user.global_name;
 
@@ -29,7 +43,7 @@ function msToMinSeconds(millis) {
 //End of status box apis
 
 //Start of activity box apis
-const currentTime = new Date().getTime();
+            const currentTime = new Date().getTime();
 
             const songTime = document.getElementById("songtime");
             if (profile.data.spotify) {
@@ -49,15 +63,15 @@ const currentTime = new Date().getTime();
             const songName = document.getElementById("songname");
             if (profile.data.activities[1] && profile.data.activities[1].details) {
                  songName.innerHTML = profile.data.activities[1].details;
-               }else{
+               }else if(profile.data.activities[1]){
                  songName.innerHTML = profile.data.activities[1].name;
             };
-            const appAvatar = profile.data.activities[1].application_id;
             if (profile.data.activities[1] && profile.data.activities[1].application_id) {
+              const appAvatar = profile.data.activities[1].application_id;
               const appPfp = ('https://dcdn.dstn.to/app-icons/'+appAvatar+'?size=1024')
               const apppfp = document.getElementById("apppfp");
               apppfp.src = appPfp;
-            }else{
+            }else if(profile.data.spotify !== null){
                  const apppfp = document.getElementById("apppfp");
                  apppfp.src = profile.data.spotify.album_art_url;
             };
