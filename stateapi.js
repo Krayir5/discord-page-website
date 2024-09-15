@@ -8,10 +8,14 @@ function initDcData(userID){
                 console.log(profile.error);
                 return false;
             }
-
+if(profile.data.activities[0] && profile.data.activities[0].id == "custom"){
             const userStatus = document.getElementById("userstate");
             userStatus.innerHTML = profile.data.activities[0].state;
-
+}else if(profile.data.activities[0] && profile.data.activities[0].flag){
+            const userStatus = document.getElementById("userstate");
+            userStatus.innerHTML = "There's no status to show";
+}
+if(profile.data.activities[0] && profile.data.activities[0].emoji){
             const emojiID = profile.data.activities[0].emoji.id;
             const emojiName = profile.data.activities[0].emoji.name;
             const emojiAnimated = profile.data.activities[0].emoji.animated;
@@ -26,7 +30,10 @@ function initDcData(userID){
                    }if(!emojiID){
                     const emojii = document.getElementById("emoji2");
                     emojii.innerHTML = emojiName
+                    console.log("Emoji kullanılıyorsa bile görünmüyor, fixlenecek.")
+                    console.log(emojiName)
                                 };
-            }
+            }}
         } 
+
 initDcData("your discord id");
