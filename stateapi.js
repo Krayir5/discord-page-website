@@ -30,8 +30,6 @@ if(profile.data.activities[0] && profile.data.activities[0].emoji){
                    }if(!emojiID){
                     const emojii = document.getElementById("emoji2");
                     emojii.innerHTML = emojiName
-                    console.log("Emoji kullanılıyorsa bile görünmüyor, fixlenecek.")
-                    console.log(emojiName)
                                 };
             }}
         } 
