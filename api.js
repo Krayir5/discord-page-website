@@ -19,16 +19,16 @@ function msToMinSeconds(millis) {
             const dcStatus = profile.data.discord_status;            
             if(dcStatus == "offline"){
                const dcstat = document.getElementById("dcstatus");
-               dcstat.src = "https://cdn.glitch.global/97df6a49-f036-4de2-8c5b-bce397d21fb5/7445_status_offline.png?v=1726306858164";
+               dcstat.src = "assets/img/offline.png";
             }else if(dcStatus == "online"){
                const dcstat = document.getElementById("dcstatus");
-               dcstat.src = "https://cdn.glitch.global/97df6a49-f036-4de2-8c5b-bce397d21fb5/9166_online.png?v=1726306858890";
+               dcstat.src = "assets/img/online.png";
             }else if(dcStatus == "idle"){
                const dcstat = document.getElementById("dcstatus");
-               dcstat.src = "https://cdn.glitch.global/97df6a49-f036-4de2-8c5b-bce397d21fb5/3929_idle.png?v=1726306857693";
+               dcstat.src = "assets/img/idle.png";
             }else if(dcStatus == "dnd"){
                const dcstat = document.getElementById("dcstatus");
-               dcstat.src = ("https://cdn.glitch.global/97df6a49-f036-4de2-8c5b-bce397d21fb5/7013-do-not-disturb.png?v=1726306859394");
+               dcstat.src = ("assets/img/dcstatus.png");
             }
             const playerCounter = document.getElementById("globalname");
             playerCounter.innerHTML = profile.data.discord_user.global_name;
