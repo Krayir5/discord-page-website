@@ -48,8 +48,11 @@ dcstat.src = ("assets/img/dcstatus.png");
 playerCounter.innerHTML = profile.data.discord_user.global_name;
 username.innerHTML = profile.data.discord_user.username;
 const avatar = profile.data.discord_user.avatar;
-const userPfp = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.png')
+userpfp.src = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.gif');
+userpfp.onerror = function() {
+const userPfp = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.png');
 userpfp.src = userPfp;
+  };
 //End of status box apis
 
 //Only listening to spotify/only gaming
