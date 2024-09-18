@@ -50,13 +50,13 @@ body {
          height: 6px;
          width: 6px;
          margin: 0 2px;
-         background-color: #bbbbbb;
+         background-color: #717171;
          border-radius: 50%;
          display: inline-block;
          transition: background-color 0.6s ease;
       }
       .active, .navigation-dot:hover {
-         background-color: #717171;
+         background-color: #bbbbbb;
       }
 /*A*/
 .status-box {
@@ -185,7 +185,7 @@ body {
   display: flex;
   align-items: flex-start;
   position: absolute;
-  top: 54%;
+  top: 63%;
   left: 55%;
   width: 250px;
   padding: 0;
