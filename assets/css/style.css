@@ -18,47 +18,51 @@ body {
   padding: 0;
   margin: 0;
 }
-/*A*/
-      .previous, .next {
-         cursor: pointer;
-         position: absolute;
-         top: 80%;
-         width: auto;
-         padding: 16px;
-         margin-top: -25px;
-         color: white;
-         font-weight: bold;
-         font-size: 18px;
-         transition: 0.6s ease;
-         border-radius: 0 3px 3px 0;
-         user-select: none;
-      }
-      
-      /* Position the "next button" to the right */
-      .next {
-         right: 0;
-         border-radius: 3px 0 0 3px;
-      }
-      .previous{
-      right: 10%;
-      }
-      
-      
-      /* The dots/bullets/indicators */
-      .navigation-dot {
-         cursor: pointer;
-         height: 6px;
-         width: 6px;
-         margin: 0 2px;
-         background-color: #717171;
-         border-radius: 50%;
-         display: inline-block;
-         transition: background-color 0.6s ease;
-      }
-      .active, .navigation-dot:hover {
-         background-color: #bbbbbb;
-      }
-/*A*/
+/*Start Sliders*/
+.previous, .next {
+cursor: pointer;
+position: absolute;
+top: 80%;
+width: auto;
+padding: 16px;
+margin-top: -25px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+.previous{
+right: 10%;
+border-radius: 3px 0 0 3px;
+}
+.navigation-dot {
+cursor: pointer;
+height: 6px;
+width: 6px;
+margin: 0 2px;
+background-color: #717171;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+.active, .navigation-dot:hover {
+background-color: #bbbbbb;
+}
+
+.navigationdots{
+  position: absolute;
+  top: 57%;
+  left: 54%;
+}
+/*End Sliders*/
+
+/*Start Status Box*/
 .status-box {
   display: flex;
   align-items: flex-start;
@@ -131,9 +135,9 @@ body {
   color: #898784;
   margin-bottom: -15px;
 }
+/*End Status Box*/
 
-
-
+/*Start Activity Bubble*/
 .activity-bubble {
   display: flex;
   align-items: flex-start;
@@ -179,13 +183,14 @@ body {
   border-radius: 20%;
   object-fit: cover;
 }
+/*End Activity Bubble*/
 
-
+/*Start Activity Box*/
 .activity-box {
   display: flex;
   align-items: flex-start;
   position: absolute;
-  top: 63%;
+  top: 62%;
   left: 55%;
   width: 250px;
   padding: 0;
@@ -225,6 +230,8 @@ body {
   border-radius: 20%;
   object-fit: cover;
 }
+/*Start Activity Box*/
+
 /* Start of the stars */
 .container-star {
   background-image: linear-gradient(to bottom, #292256 0%, #8446cf 70%, #a871d6 100%);
@@ -1467,6 +1474,7 @@ body {
   width: 100%;
   position: fixed;
   z-index: 100;
+  transition: 0.4 ease;
 }
 
 .preloader img {
