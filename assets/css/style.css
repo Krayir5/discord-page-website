@@ -1471,20 +1471,17 @@ background-color: #bbbbbb;
   background-color: #c4ebe8;
   background-size: 30%;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
-  transition: 0.4 ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .preloader img {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
   width: 520px;
   height: 520px;
-  top: 25%;
-  left: 37%;
 }
