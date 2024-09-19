@@ -227,3 +227,19 @@ gameTime.innerHTML = msToMinSeconds(gameTimeElapsed);
 //End
 } }
 initDcData("your discord id");
+
+//This is for get your bio if you want to add things you could do easily with this, shoutout to Dustin for this beautiful api.
+function initDcdnData(userID){
+        fetch('https://dcdn.dstn.to/profile/'+userID)
+        .then(response => response.json())
+        .then(profile => handleUserStatus(profile));
+  
+        function handleUserStatus(profile){
+            if(profile.success == 'false'){
+                console.log(profile.error);
+                return false;
+            }
+ const bio = document.getElementById("bio");
+bio.innerHTML = profile.user_profile.bio;
+} }
+initDcdnData("your discord id");
