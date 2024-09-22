@@ -241,5 +241,13 @@ function initDcdnData(userID){
             }
  const bio = document.getElementById("bio");
 bio.innerHTML = profile.user_profile.bio;
+
+const avatarDecoration = document.getElementById("avatardecoration");
+if(profile.user.avatar_decoration_data && profile.user.avatar_decoration_data.asset){
+const avatardeco = profile.user.avatar_decoration_data.asset;
+const avatardecoration = ('https://cdn.discordapp.com/avatar-decoration-presets/'+avatardeco+'.png');
+avatarDecoration.src = avatardecoration;
+}else{avatarDecoration.src = "assets/img/invisible.png";};
+
 } }
 initDcdnData("your discord id");
