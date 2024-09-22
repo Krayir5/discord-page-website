@@ -87,6 +87,14 @@ background-color: #bbbbbb;
   object-fit: cover;
   margin-top: -10px;
 }
+.userDecoration {
+  width: 155px;
+  height: 155px;
+  margin-left: -11px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -140px;
+}
 .userstatus {
   border-radius: 50%;
   top: 60%;
