@@ -8,6 +8,7 @@ function initDcData(userID){
                 console.log(profile.error);
                 return false;
             }
+//Functions
 function msToMinSeconds(millis) {
   var minutes = Math.floor(millis / 60000);
   var seconds = Number(((millis % 60000) / 1000).toFixed(0));
@@ -15,8 +16,13 @@ function msToMinSeconds(millis) {
     ? minutes + 1 + ":00"
     : minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
 }
-//Variables
+function timeRenew(){
 const currentTime = new Date().getTime();
+statusBox(currentTime)
+};
+setInterval(timeRenew, 1000);
+//End
+//Variables
 const dcstat = document.getElementById("dcstatus");
 const playerCounter = document.getElementById("globalname");
 const username = document.getElementById("usernm");
@@ -54,7 +60,7 @@ const userPfp = ('https://cdn.discordapp.com/avatars/'+userID+'/'+avatar+'.png')
 userpfp.src = userPfp;
   };
 //End of status box apis
-
+function statusBox(currentTime){
 //Only listening to spotify/only gaming
 if(profile.data.activities[0] && profile.data.activities[0].id !== "custom" && !profile.data.activities[1]){
 if(profile.data.listening_to_spotify == true){
@@ -225,6 +231,7 @@ songTime.innerHTML = (msToMinSeconds(timeElapsed)+'/'+msToMinSeconds(songLength)
 gameTime.innerHTML = msToMinSeconds(gameTimeElapsed);
 };
 //End
+};//Function end
 } }
 initDcData("your discord id");
 
