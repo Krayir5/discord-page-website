@@ -3,3 +3,4 @@ A basic website to show off your discord activities. For now it's using lanyard'
 # Roadmap
 1. Badges
 2. Fix small errors
+3. Update every second(prob this weekend)
